@@ -1,0 +1,61 @@
+{
+  "title": "MATH 3400 Instructor Review",
+  "scope": "Selected lesson artifacts; no full chat transcripts",
+  "lessons": [
+    {
+      "lesson": "1.1–1.3",
+      "title": "Introduction, integration and slope fields",
+      "source_chat_title": "Lesson 1.1 - 1.3 Instructor Review",
+      "path": "lessons/Lessons_1_1_to_1_3_Instructor_Review.html",
+      "sha256": "461d959f7daaa4f7fda51ee766f5f42f73cf9fd6f06bf17e9c6440a5555513c7",
+      "treatment": "Original selected instructor-review export, unchanged"
+    },
+    {
+      "lesson": "1.4",
+      "title": "Separable equations and applications",
+      "source_chat_title": "Lesson 1.4 Instructor Review",
+      "path": "lessons/Lesson_1_4_Instructor_Review.html",
+      "sha256": "12dd9489133ecc91e532cd74e493f40bd0fc2c65ff71e4cb1c60c47d0c063828",
+      "treatment": "Original selected instructor-review export, unchanged"
+    },
+    {
+      "lesson": "1.5",
+      "title": "First-order linear equations",
+      "source_chat_title": "Lesson 1.5 Instructor Review",
+      "path": "lessons/Lesson_1_5_Instructor_Review.html",
+      "sha256": "3cd694fff335d6f1f670ce8fb2ffba8956d74f6f35b5e1779a331889c2cbdfcd",
+      "treatment": "Original selected instructor-review export, unchanged"
+    },
+    {
+      "lesson": "1.6",
+      "title": "Exact equations",
+      "source_chat_title": "Lesson 1.6 Instructor Review",
+      "path": "lessons/Lesson_1_6_Instructor_Review.html",
+      "sha256": "c0fa869c599923b7d15f6bbfe6f52c8b77a57535bfc3f10973df6ec702d9b361",
+      "treatment": "Original selected instructor-review export, unchanged"
+    },
+    {
+      "lesson": "1.7",
+      "title": "Substitution methods: Parts A and B",
+      "source_chat_title": "Lesson 1.7 Instructor Review",
+      "path": "lessons/Lesson_1_7_Instructor_Review.html",
+      "sha256": "427d8e54c795afe661f86aeef705b93a6a01f259ba5fc351de83fad514fe6f3d",
+      "treatment": "Original selected instructor-review export, unchanged"
+    },
+    {
+      "lesson": "1.8",
+      "title": "Euler’s method",
+      "source_chat_title": "Lesson 1.8 Instructor Review",
+      "path": "lessons/Lesson_1_8_Instructor_Review.html",
+      "sha256": "0fcfb3c34fd688947358babb3bb97d1b90ccc806c784273e23a36fd2284cc749",
+      "treatment": "Original selected instructor-review export, unchanged"
+    }
+  ],
+  "examples": [
+    {
+      "path": "examples/homework-helper.png",
+      "sha256": "57db393a1ae3da7ce3d07e62cef8735f8758b804b4a744d9a4b4cb4e1fc73821",
+      "treatment": "Supplied screenshot, unchanged"
+    }
+  ]
+}

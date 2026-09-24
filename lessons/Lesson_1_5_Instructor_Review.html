@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Lesson 1.5 · Instructor Review</title></head><body><article aria-label="Lesson 1.5 complete instructor review studio" id="linear-studio">
+<style>
+#linear-studio{--ls-bg:light-dark(#fff,#191c20);--ls-ink:light-dark(#202832,#edf0f5);--ls-muted:light-dark(#526170,#b2bdcb);--ls-line:light-dark(#dce2e8,#39414c);--ls-soft:light-dark(#f3f6f9,#242b34);--ls-blue:light-dark(#175fba,#8bbcff);--ls-amber:light-dark(#8a4c0b,#edb67b);--ls-green:light-dark(#136e59,#89d9c0);background:var(--ls-bg);color:var(--ls-ink);font:16px/1.6 system-ui,sans-serif;max-width:760px;margin:auto;padding:30px 32px;border-radius:16px}
+#linear-studio *{box-sizing:border-box}
+#linear-studio h1{font-size:36px;line-height:1.15;letter-spacing:-1px;font-weight:650;margin:8px 0 14px}
+#linear-studio h2{font-size:28px;line-height:1.25;letter-spacing:-.5px;font-weight:600;margin:7px 0 16px}
+#linear-studio h3{font-size:21px;line-height:1.3;font-weight:600;margin:0 0 12px}
+#linear-studio p{margin:0 0 12px}
+#linear-studio .eyebrow{font-size:12px;letter-spacing:1.5px;font-weight:650;text-transform:uppercase;color:var(--ls-muted)}
+#linear-studio .muted{color:var(--ls-muted)}
+#linear-studio .small{font-size:13px}
+#linear-studio .section{border-top:1px solid var(--ls-line);margin-top:30px;padding-top:26px}
+#linear-studio .track{height:5px;background:var(--ls-soft);border-radius:4px;margin:15px 0 9px;overflow:hidden}
+#linear-studio .track span{display:block;width:0%;height:100%;background:var(--ls-green)}
+#linear-studio .blue{color:var(--ls-blue)}
+#linear-studio .amber{color:var(--ls-amber)}
+#linear-studio .green{color:var(--ls-green)}
+#linear-studio .prompt{margin:18px 0 22px;padding:18px 20px;background:var(--ls-soft);border-radius:10px;font-size:18px;line-height:1.65}
+#linear-studio .term{border-bottom:2px solid currentColor;padding-bottom:2px}
+#linear-studio .equation{font:30px/1.6 Georgia,serif;text-align:center;margin:22px 0;overflow-wrap:anywhere}
+#linear-studio .keys{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:22px 0}
+#linear-studio .keys.pair{grid-template-columns:repeat(2,minmax(0,1fr))}
+#linear-studio .keys strong{display:block;font:27px/1.4 Georgia,serif;margin-bottom:8px}
+#linear-studio .keys span{font-size:14px;display:block}
+#linear-studio .note{border-left:3px solid var(--ls-amber);padding:3px 0 3px 16px;margin:22px 0}
+#linear-studio .nav{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:26px}
+#linear-studio button{min-height:44px;padding:10px 17px;font:550 14px/1.4 system-ui,sans-serif;color:var(--ls-ink);background:var(--ls-bg);border:1px solid var(--ls-line);border-radius:8px}
+#linear-studio button.primary{background:var(--ls-ink);color:var(--ls-bg);border-color:var(--ls-ink)}
+#linear-studio button:disabled{opacity:.35}
+#linear-studio .stepcount{font-size:13px;color:var(--ls-muted);text-align:center}
+#linear-studio details{margin-top:20px}
+#linear-studio summary{min-height:44px;font-weight:550;padding:8px 0}
+#linear-studio details p{padding-top:10px}
+#linear-studio input[type=range]{width:100%;min-height:38px;accent-color:var(--ls-green);margin:5px 0}
+#linear-studio .range-label{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+#linear-studio output{font-variant-numeric:tabular-nums}
+#linear-studio svg{display:block;width:100%;height:auto;margin:10px 0}
+#linear-studio svg text{font:12px system-ui,sans-serif;fill:var(--ls-muted)}
+#linear-studio .calculation{background:var(--ls-soft);border-radius:8px;padding:13px 16px;margin:14px 0;font-size:17px}
+#linear-studio ol{padding-left:24px;margin:14px 0 0}
+#linear-studio li{padding-left:6px;margin-bottom:18px}
+#linear-studio li strong{display:block}
+#linear-studio li span{display:block;color:var(--ls-muted);font-size:14px}
+#linear-studio [hidden]{display:none!important}
+@media(max-width:480px){#linear-studio{padding:24px 18px}#linear-studio h1{font-size:32px}#linear-studio h2{font-size:26px}#linear-studio .keys,#linear-studio .keys.pair{grid-template-columns:1fr;gap:12px}#linear-studio .keys>div{display:flex;gap:16px;align-items:center}#linear-studio .keys strong{min-width:66px;margin:0}#linear-studio .prompt{padding:15px}#linear-studio button{padding:10px 13px}}
+
+
+:root{color-scheme:light dark}body{margin:0;background:transparent}
+#linear-studio button,#linear-studio summary{cursor:pointer}
+#linear-studio button:disabled{cursor:default}
+#linear-studio :focus-visible{outline:3px solid var(--ls-blue);outline-offset:4px}
+#linear-studio .equation sup{font-size:.65em;line-height:0}
+#linear-studio .equation small{font:14px/1.6 system-ui,sans-serif;display:block;color:var(--ls-muted);margin-top:10px}
+#linear-studio .case-row{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap}
+#linear-studio .case-row span{white-space:nowrap}
+#linear-studio .fraction{display:inline-grid;vertical-align:middle;grid-template-rows:auto auto;text-align:center;line-height:1.3;margin:0 .12em}
+#linear-studio .fraction>span:first-child{border-bottom:1px solid currentColor;padding:0 4px 3px}
+#linear-studio .fraction>span:last-child{padding:3px 4px 0}
+#linear-studio .subtle{font-size:14px;color:var(--ls-muted)}
+#linear-studio .section>details:first-child{margin-top:0}
+#linear-studio .source-note{font-size:13px;color:var(--ls-muted)}
+#linear-studio .keys div{text-align:center}
+#linear-studio .mini-table{border-collapse:collapse;width:auto;margin:14px auto;max-width:100%;font-size:15px}
+#linear-studio .mini-table td,#linear-studio .mini-table th{padding:9px 14px;text-align:left;border-bottom:1px solid var(--ls-line)}
+#linear-studio .mini-table th{font-weight:600}
+#linear-studio .roadmap li{margin-bottom:12px}
+#linear-studio .roadmap li strong{font-size:15px}
+#linear-studio .contextline{font-variant-numeric:tabular-nums}
+#linear-studio .nav{margin-bottom:0}
+@media(max-width:480px){#linear-studio .keys>div{display:block;text-align:center}#linear-studio .equation{font-size:26px}#linear-studio .mini-table td,#linear-studio .mini-table th{padding:8px}}
+
+#linear-studio .step-equation{display:none}
+#linear-studio .stage-link{font:inherit;text-align:left;padding:6px 9px;min-height:44px}
+#linear-studio .stage-link[aria-current="step"]{background:var(--ls-soft);border-color:var(--ls-blue)}
+#linear-studio .calculation{overflow-wrap:anywhere}
+#linear-studio .equation{overflow-wrap:anywhere}
+#linear-studio .fraction{max-width:100%;white-space:normal}
+#linear-studio .mini-table{width:100%;table-layout:fixed}
+#linear-studio .mini-table td,#linear-studio .mini-table th{overflow-wrap:anywhere}
+#linear-studio button,#linear-studio summary{cursor:auto}
+@media(max-width:360px){#linear-studio{padding:22px 16px}#linear-studio .equation{font-size:23px}#linear-studio .nav{gap:4px}#linear-studio button{padding:10px}}
+</style>
+<header>
+<div class="eyebrow">MATH 3400 · Lesson 1.5</div>
+<h1>First-order linear equations</h1>
+<p class="muted">Turn a differential equation into one product derivative.</p>
+
+<p class="small muted contextline">Studio 1.1 · Instructor review · 8 fully authored stages</p>
+<p aria-live="polite" class="small muted" id="ls-location">Stage 1 of 8 · Step 1 of 4</p></header>
+<section aria-labelledby="ls-title" class="section">
+<div class="eyebrow" id="ls-mode">Stage 1 · Recognize and prepare</div>
+<h2 id="ls-title">Read the linear form</h2>
+<div class="prompt" id="ls-problem-label">Casey’s definition · 1.5.pdf, page 1</div>
+<div aria-live="polite" class="equation" id="ls-equation">y′ + <span class="blue">P(x)</span>y = <span class="green">Q(x)</span></div>
+<div class="lesson-step" data-label="Casey’s definition · 1.5.pdf, page 1" data-stage="1" data-title="Read the linear form" id="ls-pane0"><div class="step-equation">y′ + <span class="blue">P(x)</span>y = <span class="green">Q(x)</span></div>
+<div class="keys">
+<div><strong>y′</strong><span>First derivative<br/>Rate of change of y</span></div>
+<div class="blue"><strong>P(x)</strong><span>Coefficient<br/>Multiplies y</span></div>
+<div class="green"><strong>Q(x)</strong><span>Right-side function<br/>Depends on x, not y</span></div>
+</div>
+<p>The unknown is <strong>y(x)</strong>. The functions P(x) and Q(x) are given.</p>
+<div class="note"><strong>Recognition cue</strong><br/>Look at how the unknown y and its derivative appear.</div>
+<p class="source-note">Casey, 1.5.pdf, page 1: definition. Labels and recognition cue are tutor-added.</p>
+</div>
+<div class="lesson-step" data-label="Tutor-added recognition comparison" data-stage="1" data-title="Look at the unknown" hidden="" id="ls-pane1"><div class="step-equation"><span class="blue">x<sup>2</sup>y</span> ≠ <span class="amber">y<sup>2</sup></span></div>
+<div class="keys pair">
+<div class="blue"><strong>x<sup>2</sup> · y</strong><span>An x-dependent coefficient<br/>times the first power of y</span></div>
+<div class="amber"><strong>y<sup>2</sup></strong><span>A square of the unknown<br/>does not fit P(x)y</span></div>
+</div>
+<p>“Linear” describes the way <strong>y and y′</strong> enter the equation. It doesn't require a straight-line solution graph.</p>
+<div class="note"><strong>Memory cue</strong><br/>Check the unknown, not how complicated x looks.</div>
+<p class="source-note">Tutor-added explanation of Casey’s definition, page 1.</p>
+</div>
+<div class="lesson-step" data-label="Tutor-created standard-form demonstration" data-stage="1" data-title="Make the derivative’s coefficient 1" hidden="" id="ls-pane2"><div class="step-equation">2y′ + 6y = 10</div>
+<div class="calculation">Divide <strong>every term</strong> by 2. The coefficient of y′ becomes 1.</div>
+<div class="equation">y′ + <span class="blue">3</span>y = <span class="green">5</span></div>
+<div class="keys pair">
+<div class="blue"><strong>P(x) = 3</strong><span>Coefficient after division</span></div>
+<div class="green"><strong>Q(x) = 5</strong><span>Right side after division</span></div>
+</div>
+<details><summary>Replay the division</summary><div class="equation"><span class="fraction"><span>2y′</span><span>2</span></span> + <span class="fraction"><span>6y</span><span>2</span></span> = <span class="fraction"><span>10</span><span>2</span></span></div></details>
+<div class="note"><strong>Trap</strong><br/>Read P(x) only after the coefficient of y′ is 1.</div>
+<p class="source-note">Tutor-created setup demonstration, preserved from the existing studio.</p>
+</div>
+<div class="lesson-step" data-label="Tutor-created recognition checkpoint" data-stage="1" data-title="Does the power of x matter?" hidden="" id="ls-pane3"><div class="step-equation">y′ + x<sup>2</sup>y = sin(x)</div>
+<p><strong>Does the x<sup>2</sup> make this equation nonlinear? Explain briefly.</strong></p>
+<p class="muted">Consider the question, then open the explanation when ready. All later stages are available with Next.</p>
+<details id="ls-hint"><summary>Show a hint</summary><p>Compare the term x<sup>2</sup>y with P(x)y. Which symbol is being squared?</p></details>
+<details class="answer" id="ls-reveal"><summary>Reveal the explanation</summary><p>No. The unknown y appears to the first power and its coefficient is the function P(x) = x<sup>2</sup>. The equation fits Casey’s linear form, with Q(x) = sin(x).</p></details>
+</div>
+<div class="lesson-step" data-label="Casey’s method · page 1" data-stage="2" data-title="Choose the multiplier" hidden="">
+<div class="step-equation">ρ(x) = e<sup>∫P(x) dx</sup></div>
+<p>Start with y′ + P(x)y = Q(x). Choose any one antiderivative F of P, then set ρ = e<sup>F</sup>. The exponential is nonzero wherever F is defined.</p>
+<div class="calculation">F′(x) = P(x)<br/>ρ′(x) = e<sup>F(x)</sup>F′(x) = ρ(x)P(x)</div>
+<p>This last identity is the reason for the choice. We want the multiplier’s derivative to supply exactly the coefficient of y.</p>
+<details><summary>Why no +C in the integrating factor?</summary><p>Using F + K gives e<sup>K</sup>ρ. This is a nonzero constant multiple of ρ and works just as well. We need only one multiplier. We still need an arbitrary constant when integrating the differential equation.</p></details>
+</div><div class="lesson-step" data-label="Casey’s method · page 1" data-stage="2" data-title="Multiply every term" hidden="">
+<div class="step-equation">ρy′ + ρP(x)y = ρQ(x)</div>
+<p>Multiply the entire equation by ρ(x), including its right side.</p>
+<div class="keys pair"><div><strong>ρy′</strong><span>Multiplier × derivative of y</span></div><div><strong>ρ′y</strong><span>Derivative of multiplier × y</span></div></div>
+<div class="calculation">Because ρ′ = ρP, the left side is ρy′ + ρ′y.</div>
+<div class="note"><strong>Common trap</strong><br/>Multiplying only the left side changes the equation. The right side must become ρQ.</div>
+</div><div class="lesson-step" data-label="Casey’s proof · page 1; expanded explanation" data-stage="2" data-title="Recognize the product derivative" hidden="">
+<div class="step-equation">d/dx [ρ(x)y] = ρ(x)Q(x)</div>
+<div class="calculation">Product rule: (ρy)′ = ρy′ + ρ′y<br/>Chain rule: ρ′y = ρP(x)y<br/>Therefore: (ρy)′ = ρ[y′ + P(x)y]</div>
+<p>The integrating factor packages two terms into one derivative. Once that happens, direct integration applies.</p>
+<div class="note"><strong>Tutor-added memory cue</strong><br/>Normalize → multiply → recognize a product → integrate → divide.</div>
+</div><div class="lesson-step" data-label="Casey’s formula · page 1; constant made explicit" data-stage="2" data-title="Integrate, then isolate y" hidden="">
+<div class="step-equation">ρy = ∫ρQ dx + C</div>
+<p>Here ∫ρQ dx means one chosen antiderivative. The explicit +C represents the family of solutions.</p>
+<div class="equation">y = <span class="fraction"><span>∫ρQ dx + C</span><span>ρ</span></span></div>
+<p>Dr. Casey’s page 1 writes the indefinite-integral formula without a separate +C; the worked examples display C explicitly. This studio does the same in every example.</p>
+<details><summary>Why only one arbitrary constant?</summary><p>If both sides are integrated with constants, ρy + C₁ = F + C₂. Rearranging gives ρy = F + (C₂ − C₁). Rename the difference C.</p></details>
+</div><div class="lesson-step" data-label="Tutor-added practice · reveal when ready" data-stage="2" data-title="Check the product-rule connection" hidden="">
+<div class="step-equation">y′ + 2xy = x</div>
+<p>Which multiplier turns the left side into a product derivative, and what is the resulting equation?</p>
+<details><summary>Show a hint</summary><p>Integrate the coefficient 2x. Then use (ρy)′ = ρy′ + ρ′y.</p></details>
+<details class="answer"><summary>Reveal answer and correction</summary><div class="calculation">ρ = e<sup>x²</sup>, so ρ′ = 2xe<sup>x²</sup>.<br/>(e<sup>x²</sup>y)′ = xe<sup>x²</sup>.</div><p>If you chose e<sup>2x</sup>, you exponentiated the coefficient without first integrating it. Repair ∫2x dx = x².</p></details>
+</div><div class="lesson-step" data-label="Casey’s Example 1 · pages 1–2" data-stage="3" data-title="Example 1: identify P and Q" hidden="">
+<div class="step-equation">dy/dx + y = 4</div>
+<p><strong>Classification:</strong> first-order linear. The equation is already in standard form, with P(x) = 1 and Q(x) = 4.</p>
+<div class="calculation">ρ(x) = e<sup>∫1 dx</sup> = e<sup>x</sup></div>
+<p>This example is also separable. We use the integrating factor to learn the method that will handle the later examples.</p>
+</div><div class="lesson-step" data-label="Casey’s Example 1 · page 1" data-stage="3" data-title="Example 1: make one derivative" hidden="">
+<div class="step-equation">e<sup>x</sup>y′ + e<sup>x</sup>y = 4e<sup>x</sup></div>
+<div class="calculation">(e<sup>x</sup>y)′ = e<sup>x</sup>y′ + e<sup>x</sup>y</div>
+<div class="equation">d/dx (e<sup>x</sup>y) = 4e<sup>x</sup></div>
+<p>The derivative of e<sup>x</sup> is e<sup>x</sup>, so the two terms match the product rule exactly.</p>
+</div><div class="lesson-step" data-label="Casey’s Example 1 · page 2" data-stage="3" data-title="Example 1: integrate and divide" hidden="">
+<div class="step-equation">e<sup>x</sup>y = 4e<sup>x</sup> + C</div>
+<div class="calculation">Integrate: ∫4e<sup>x</sup> dx = 4e<sup>x</sup> + C.<br/>Divide every term by e<sup>x</sup>: y = 4 + C/e<sup>x</sup>.</div>
+<div class="equation">y(x) = 4 + Ce<sup>−x</sup></div>
+<p>This is the general solution. No initial condition is supplied, so C stays arbitrary.</p>
+<div class="note"><strong>Common trap</strong><br/>The constant term becomes Ce<sup>−x</sup> after division. It does not stay +C.</div>
+</div><div class="lesson-step" data-label="Tutor-added verification of Casey’s result" data-stage="3" data-title="Example 1: verify the whole family" hidden="">
+<div class="step-equation">y′ + y = −Ce<sup>−x</sup> + 4 + Ce<sup>−x</sup> = 4</div>
+<p><strong>Interval:</strong> (−∞, ∞). The coefficients and every member of this family are defined for all real x.</p>
+<p>The equilibrium solution y = 4 appears when C = 0. We never divided by y − 4, so it was not lost.</p>
+<details class="answer"><summary>Practice: why isn’t y = 4 + C the general solution? Reveal</summary><p>A constant y = 4 + C has y′ = 0, so substitution gives 4 + C = 4. That works only for C = 0. The exponential is essential for the rest of the family.</p></details>
+</div><div class="lesson-step" data-label="Casey’s Example 2 · page 2" data-stage="4" data-title="Example 2: normalize the IVP" hidden="">
+<div class="step-equation">(1 + x)y′ + y = cos(x)<br/><small>y(0) = 1</small></div>
+<p><strong>Classification:</strong> first-order linear IVP. Divide every term by 1 + x, requiring x ≠ −1.</p>
+<div class="equation">y′ + <span class="fraction"><span>1</span><span>1 + x</span></span>y = <span class="fraction"><span>cos(x)</span><span>1 + x</span></span></div>
+<p>The initial point is x₀ = 0. We work on the connected interval (−1, ∞), where 1 + x is positive.</p>
+</div><div class="lesson-step" data-label="Casey’s Example 2 · page 2; domain explanation added" data-stage="4" data-title="Example 2: build ρ on the interval" hidden="">
+<div class="step-equation">ρ(x) = e<sup>ln(1 + x)</sup> = 1 + x</div>
+<div class="calculation">In general: ∫1/(1 + x) dx = ln|1 + x| + K.<br/>On (−1, ∞): |1 + x| = 1 + x.</div>
+<p>This justifies the ln(1 + x) written in the notes. The interval matters when removing absolute-value bars.</p>
+<details><summary>What if the initial point were left of −1?</summary><p>On (−∞, −1), e<sup>ln|1+x|</sup> = −(1+x). Multiplying this factor by −1 gives 1+x, which also works as a nonzero integrating factor on that interval. Neither choice bridges x = −1.</p></details>
+</div><div class="lesson-step" data-label="Casey’s Example 2 · page 2" data-stage="4" data-title="Example 2: use the product rule" hidden="">
+<div class="step-equation">d/dx [(1 + x)y] = cos(x)</div>
+<div class="calculation">Multiply the standardized equation by 1 + x:<br/>(1 + x)y′ + y = cos(x).<br/>The product rule gives [(1 + x)y]′ = (1 + x)y′ + y.</div>
+<p>Multiplication returns the original left side, now recognized as one derivative.</p>
+</div><div class="lesson-step" data-label="Casey’s Example 2 · page 2" data-stage="4" data-title="Example 2: integrate before using the data" hidden="">
+<div class="step-equation">(1 + x)y = sin(x) + C</div>
+<div class="equation">y(x) = <span class="fraction"><span>sin(x) + C</span><span>1 + x</span></span></div>
+<p>The entire numerator is divided by 1 + x, including C.</p>
+<details><summary>Why does cos(x) integrate to sin(x)?</summary><p>Differentiate sin(x): its derivative is cos(x). There is no negative sign in this antiderivative.</p></details>
+</div><div class="lesson-step" data-label="Casey’s Example 2 · page 2" data-stage="4" data-title="Example 2: select the initial-value solution" hidden="">
+<div class="step-equation">1 = y(0) = (sin(0) + C)/(1 + 0) = C</div>
+<div class="equation">y(x) = <span class="fraction"><span>sin(x) + 1</span><span>1 + x</span></span></div>
+<p>The initial condition selects C = 1 from the family. Its connected solution interval containing 0 is (−1, ∞).</p>
+<div class="note"><strong>Common trap</strong><br/>Substitute x = 0 into the whole solution, including its denominator.</div>
+</div><div class="lesson-step" data-label="Tutor-added verification of Casey’s result" data-stage="4" data-title="Example 2: check equation and initial value" hidden="">
+<div class="step-equation">y′ = <span class="fraction"><span>(1 + x)cos(x) − (sin(x) + 1)</span><span>(1 + x)²</span></span></div>
+<div class="calculation">(1 + x)y′ + y<br/>= [(1 + x)cos(x) − sin(x) − 1 + sin(x) + 1]/(1 + x)<br/>= cos(x).</div>
+<p>Also, y(0) = (0 + 1)/(1 + 0) = 1. Both parts of the IVP check.</p>
+<details><summary>Can this particular solution cross x = −1?</summary><p>No. Its numerator there is 1 − sin(1), which is nonzero. The solution becomes unbounded as x approaches −1 from the right. This IVP has no continuous extension through that point.</p></details>
+</div><div class="lesson-step" data-label="Casey’s theorem · page 2; interval version explained" data-stage="5" data-title="What guarantees uniqueness?" hidden="">
+<div class="step-equation">y′ + P(x)y = Q(x),   y(x₀) = y₀</div>
+<p>Dr. Casey states that continuity of P and Q around x₀ guarantees a unique solution to the IVP.</p>
+<p><strong>Standard mathematical elaboration:</strong> if P and Q are continuous on an open interval I containing x₀, the linear IVP has a unique solution throughout I.</p>
+<div class="calculation">For Example 2:<br/>P(x) = 1/(1 + x), Q(x) = cos(x)/(1 + x).<br/>Both are continuous on I = (−1, ∞), which contains x₀ = 0.</div>
+<details><summary>Why does one initial value select one solution?</summary><p>If two solutions have the same initial value, their difference z satisfies z′ + Pz = 0 and z(x₀) = 0. Multiplying by ρ gives (ρz)′ = 0, so ρz is constant. Its value at x₀ is 0. Since ρ never vanishes, z = 0 throughout I.</p></details>
+</div><div class="lesson-step" data-label="Tutor-added interval procedure" data-stage="5" data-title="Choose one connected interval" hidden="">
+<div class="step-equation">−1 &lt; x &lt; ∞</div>
+<ol><li><strong>Standardize first</strong><span>Identify P and Q after dividing by the coefficient of y′.</span></li><li><strong>Find the boundaries</strong><span>Locate coefficient discontinuities and restrictions on the solution.</span></li><li><strong>Keep the component containing x₀</strong><span>Use one connected interval, not a union separated by a forbidden point.</span></li></ol>
+<p>A theorem failing at a point means its guarantee does not apply there. It does not by itself prove that no solution or no unique solution can exist there.</p>
+</div><div class="lesson-step" data-label="Tutor-added practice using Example 2’s coefficients" data-stage="5" data-title="Interval checkpoint" hidden="">
+<div class="step-equation">P(x) = 1/(1 + x),   Q(x) = cos(x)/(1 + x)</div>
+<p>If an initial condition were given at x₀ = −2, which maximal coefficient-continuity interval contains it?</p>
+<details class="answer"><summary>Reveal answer and correction</summary><p><strong>(−∞, −1).</strong> The initial point lies to the left of the discontinuity. The set x ≠ −1 has two components; only one contains −2.</p><p>If you selected (−1, ∞), you reused Example 2’s initial point instead of checking the new one.</p></details>
+</div><div class="lesson-step" data-label="Casey’s Example 3 · pages 2–3; guided reveals added" data-stage="6" data-title="Example 3: prepare the equation" hidden="">
+<div class="step-equation">xy′ + (2x − 3)y = 4x⁴</div>
+<p><strong>Classification:</strong> first-order linear. There is no initial condition. The coefficient of y′ is x, so the standardized method requires x ≠ 0.</p>
+<p>Divide every term by x. What are P(x) and Q(x)?</p>
+<details><summary>Show a hint</summary><p>(2x − 3)/x = 2 − 3/x. Also 4x⁴/x = 4x³.</p></details>
+<details class="answer"><summary>Reveal standard form</summary><div class="equation">y′ + (2 − 3/x)y = 4x³</div><p>P(x) = 2 − 3/x and Q(x) = 4x³. Work on either (0, ∞) or (−∞, 0).</p></details>
+</div><div class="lesson-step" data-label="Casey’s Example 3 · page 2; absolute values made explicit" data-stage="6" data-title="Example 3: integrate the coefficient" hidden="">
+<div class="step-equation">P(x) = 2 − 3/x</div>
+<p>Use ∫1/x dx = ln|x|. What antiderivative belongs in the exponent?</p>
+<details class="answer"><summary>Reveal the antiderivative and factor</summary><div class="calculation">∫(2 − 3/x) dx = 2x − 3 ln|x|.<br/>ρ = e<sup>2x − 3 ln|x|</sup> = e<sup>2x</sup>|x|<sup>−3</sup>.</div><p>On x &gt; 0 this is x<sup>−3</sup>e<sup>2x</sup>, the factor displayed in the notes.</p><p>On x &lt; 0, Casey’s factor x<sup>−3</sup>e<sup>2x</sup> is −1 times the positive exponential factor. A nonzero constant multiple is valid, so it also works on that interval.</p></details>
+<details><summary>Source clarification: the logarithm in the notes</summary><p>Page 2 writes an exponent of the form 2x − ln(x³) before simplifying to x<sup>−3</sup>e<sup>2x</sup>. That real logarithm is directly valid for x &gt; 0. The ln|x| version above makes the negative-x interval explicit without changing the displayed working factor.</p></details>
+</div><div class="lesson-step" data-label="Casey’s Example 3 · page 2" data-stage="6" data-title="Example 3: make the cancellation visible" hidden="">
+<div class="step-equation">ρ = x<sup>−3</sup>e<sup>2x</sup></div>
+<p>Multiply the standardized equation by ρ. Simplify the right side before integrating.</p>
+<details class="answer"><summary>Reveal the product equation</summary><div class="calculation">ρQ = (x<sup>−3</sup>e<sup>2x</sup>)(4x³) = 4e<sup>2x</sup></div><div class="equation">d/dx [x<sup>−3</sup>e<sup>2x</sup>y] = 4e<sup>2x</sup></div><p>The powers cancel because x<sup>−3</sup>x³ = 1 for x ≠ 0.</p></details>
+<details><summary>Verify ρ′ = Pρ directly</summary><div class="calculation">ρ′ = −3x<sup>−4</sup>e<sup>2x</sup> + 2x<sup>−3</sup>e<sup>2x</sup><br/>= (2 − 3/x)x<sup>−3</sup>e<sup>2x</sup> = Pρ.</div></details>
+</div><div class="lesson-step" data-label="Casey’s Example 3 · page 3" data-stage="6" data-title="Example 3: integrate the exponential" hidden="">
+<div class="step-equation">(x<sup>−3</sup>e<sup>2x</sup>y)′ = 4e<sup>2x</sup></div>
+<p>What is ∫4e<sup>2x</sup> dx? Check the factor of 2 by differentiating.</p>
+<details class="answer"><summary>Reveal the integrated equation</summary><div class="equation">x<sup>−3</sup>e<sup>2x</sup>y = 2e<sup>2x</sup> + C</div><p>Because (2e<sup>2x</sup>)′ = 4e<sup>2x</sup>, the antiderivative is correct.</p><p>If you wrote 4e<sup>2x</sup>, its derivative would be 8e<sup>2x</sup>. Divide by the inner derivative 2 when integrating this exponential.</p></details>
+</div><div class="lesson-step" data-label="Casey’s Example 3 · page 3" data-stage="6" data-title="Example 3: isolate the solution" hidden="">
+<div class="step-equation">x<sup>−3</sup>e<sup>2x</sup>y = 2e<sup>2x</sup> + C</div>
+<p>Multiply both sides by the reciprocal x³e<sup>−2x</sup>. What happens to each term on the right?</p>
+<details class="answer"><summary>Reveal the general solution</summary><div class="calculation">y = x³e<sup>−2x</sup>(2e<sup>2x</sup> + C)<br/>= 2x³ + Cx³e<sup>−2x</sup>.</div><p>This is Casey’s result. C is arbitrary on each connected interval. With no initial condition, we cannot choose a numerical value for C.</p></details>
+</div><div class="lesson-step" data-label="Tutor-added verification of Casey’s result" data-stage="6" data-title="Example 3: verify before claiming success" hidden="">
+<div class="step-equation">y = 2x³ + Cx³e<sup>−2x</sup></div>
+<p>Differentiate with the product rule, then substitute into the original equation.</p>
+<details class="answer"><summary>Reveal the verification</summary><div class="calculation">y′ = 6x² + Ce<sup>−2x</sup>(3x² − 2x³).<br/>xy′ = 6x³ + Ce<sup>−2x</sup>(3x³ − 2x⁴).<br/>(2x − 3)y = 4x⁴ − 6x³ + Ce<sup>−2x</sup>(2x⁴ − 3x³).</div><p>Adding cancels 6x³ with −6x³ and cancels the entire C-dependent term. The result is 4x⁴, as required.</p></details>
+</div><div class="lesson-step" data-label="Tutor-added domain clarification, beyond the written solution" data-stage="6" data-title="Example 3: what happens at zero?" hidden="">
+<div class="step-equation">xy′ + (2x − 3)y = 4x⁴</div>
+<p><strong>Method intervals:</strong> (−∞, 0) and (0, ∞). The standardized coefficient 2 − 3/x is undefined at zero.</p>
+<p><strong>Original-equation check:</strong> for any fixed C, y = 2x³ + Cx³e<sup>−2x</sup> and its derivative are defined on all of ℝ. At x = 0, the equation requires −3y(0) = 0, and this family has y(0) = 0. Direct substitution therefore extends each member through zero.</p>
+<div class="note"><strong>Separate the two claims</strong><br/>The integrating-factor derivation used x ≠ 0. The extension to all real x is justified afterward by checking the original equation.</div>
+<details><summary>Why doesn’t uniqueness at x₀ = 0 follow?</summary><p>Every value of C gives y(0) = 0, so that initial condition does not determine C. In fact, different constants may be used on x &lt; 0 and x &gt; 0 while joining with y(0) = 0: both one-sided derivatives tend to 0. The fixed-C formula is a global solution family, but it does not exhaust these possible joined solutions.</p></details>
+</div><div class="lesson-step" data-label="Tutor-created application · not an instructor example" data-stage="7" data-title="Engineering: a cooling component" hidden="">
+<div class="step-equation">C<sub>th</sub>T′ = −hA(T − T<sub>a</sub>)</div>
+<p>Assume a component has uniform temperature, constant thermal properties, fixed ambient temperature and no internal heat source.</p>
+<table class="mini-table"><thead><tr><th>Quantity</th><th>Meaning and units</th></tr></thead><tbody><tr><td>T(t), T<sub>a</sub></td><td>Component and ambient temperature, °C</td></tr><tr><td>T′(t)</td><td>Temperature-change rate, °C/s</td></tr><tr><td>C<sub>th</sub></td><td>Thermal capacitance, J/K</td></tr><tr><td>hA</td><td>Heat-transfer conductance, W/K</td></tr></tbody></table>
+<p>A temperature difference of 1 °C equals a difference of 1 K. Both sides of the energy balance have units J/s, or W.</p>
+<details><summary>State versus rate</summary><p>T is the current temperature. T′ says how quickly it changes. If T exceeds the ambient temperature, the right side is negative, so the component cools.</p></details>
+</div><div class="lesson-step" data-label="Tutor-created hypothetical values" data-stage="7" data-title="Engineering: put the balance in standard form" hidden="">
+<div class="step-equation">T′ + kT = kT<sub>a</sub>,   k = hA/C<sub>th</sub></div>
+<p>Let C<sub>th</sub> = 100 J/K, hA = 5 W/K, T<sub>a</sub> = 20 °C and T(0) = 80 °C.</p>
+<div class="calculation">k = 5/100 = 0.05 s<sup>−1</sup>.<br/>T′ + (0.05 s<sup>−1</sup>)T = 1 °C/s.</div>
+<p><strong>Classification:</strong> first-order linear, with t as the independent variable. The integrating factor is ρ(t) = e<sup>kt</sup>. Its exponent kt is dimensionless.</p>
+</div><div class="lesson-step" data-label="Tutor-created application · same integrating-factor method" data-stage="7" data-title="Engineering: solve the initial-value model" hidden="">
+<div class="step-equation">(e<sup>kt</sup>T)′ = kT<sub>a</sub>e<sup>kt</sup></div>
+<div class="calculation">Integrate: e<sup>kt</sup>T = T<sub>a</sub>e<sup>kt</sup> + C.<br/>Divide: T = T<sub>a</sub> + Ce<sup>−kt</sup>.<br/>Apply T(0) = 80 °C: C = 80 °C − 20 °C = 60 °C.</div>
+<div class="equation">T(t) = 20 + 60e<sup>−0.05t</sup><small>T in °C, t in seconds</small></div>
+<p>Mathematical solution interval: (−∞, ∞). Physical prediction: t ≥ 0 while the model assumptions hold.</p>
+<details><summary>Verification and physical meaning</summary><p>T′ = −3e<sup>−0.05t</sup> °C/s. Also −k(T − T<sub>a</sub>) = −0.05 × 60e<sup>−0.05t</sup> = −3e<sup>−0.05t</sup> °C/s, and T(0) = 80 °C. The model approaches 20 °C from above.</p><p>At t = 20 s, T = 20 + 60/e °C exactly, approximately 42.1 °C. This is one time constant, 1/k = 20 s.</p></details>
+</div><div class="lesson-step" data-label="Tutor-created slope-field check" data-stage="7" data-title="Prerequisite retrieval: slope sign" hidden="">
+<div class="step-equation">y′ = 4 − y</div>
+<p>At a point with y = 6, does the solution rise or fall as x increases?</p>
+<details class="answer"><summary>Reveal answer and correction</summary><div class="calculation">y′ = 4 − 6 = −2 &lt; 0.</div><p>The solution falls from left to right. A negative derivative describes downward direction as x increases, regardless of whether y itself is positive.</p></details>
+</div><div class="lesson-step" data-label="Tutor-created slope-field check" data-stage="7" data-title="Prerequisite retrieval: horizontal segments" hidden="">
+<div class="step-equation">y′ = 4 − y</div>
+<p>Where are the slope-field segments horizontal?</p>
+<details class="answer"><summary>Reveal answer and correction</summary><div class="calculation">Set the entire right side to zero:<br/>4 − y = 0 ⇒ y = 4.</div><p>This horizontal line is the equilibrium solution from Example 1. Do not set only the term −y equal to zero.</p></details>
+</div><div class="lesson-step" data-label="Tutor-created exit check · answers stay behind reveals" data-stage="8" data-title="Exit 1: choose the method" hidden="">
+<div class="step-equation">y′ + x²y = sin(x)</div>
+<p>Is this equation linear? Identify P(x), Q(x) and an integrating factor.</p>
+<details class="answer"><summary>Reveal answer and correction</summary><p>Yes. P(x) = x² and Q(x) = sin(x). The unknown y and its derivative enter linearly.</p><div class="calculation">ρ = e<sup>∫x² dx</sup> = e<sup>x³/3</sup>.</div><p>If you rejected it because of x², check the power of the unknown y instead. This is the preserved opening question extended to test the integrating factor.</p></details>
+</div><div class="lesson-step" data-label="Tutor-created practice" data-stage="8" data-title="Exit 2: solve a simple IVP" hidden="">
+<div class="step-equation">2y′ + 6y = 10,   y(0) = 2</div>
+<p>Find the exact solution and its connected interval.</p>
+<details><summary>Show a hint</summary><p>First divide every term by 2. Then build ρ from the new coefficient of y.</p></details>
+<details class="answer"><summary>Reveal full solution and check</summary><div class="calculation">y′ + 3y = 5; ρ = e<sup>3x</sup>.<br/>(e<sup>3x</sup>y)′ = 5e<sup>3x</sup>.<br/>e<sup>3x</sup>y = (5/3)e<sup>3x</sup> + C.<br/>y = 5/3 + Ce<sup>−3x</sup>.<br/>2 = 5/3 + C ⇒ C = 1/3.</div><p><strong>y = 5/3 + (1/3)e<sup>−3x</sup>, on (−∞, ∞).</strong></p><p>Check: y′ = −e<sup>−3x</sup>. Then 2y′ + 6y = −2e<sup>−3x</sup> + 10 + 2e<sup>−3x</sup> = 10, and y(0) = 2.</p><p>If ρ = e<sup>6x</sup>, the first error was reading P before standardizing.</p></details>
+</div><div class="lesson-step" data-label="Tutor-created practice" data-stage="8" data-title="Exit 3: mixed interval practice" hidden="">
+<div class="step-equation">xy′ + 2y = x²,   y(1) = 0</div>
+<p>Find the solution and the maximal connected interval containing x₀ = 1.</p>
+<details><summary>Show a hint</summary><p>For x &gt; 0, standard form is y′ + (2/x)y = x. Use ρ = x².</p></details>
+<details class="answer"><summary>Reveal full solution and check</summary><div class="calculation">(x²y)′ = x³.<br/>x²y = x⁴/4 + C.<br/>y = x²/4 + C/x².<br/>0 = 1/4 + C ⇒ C = −1/4.</div><p><strong>y = x²/4 − 1/(4x²), on (0, ∞).</strong></p><p>y′ = x/2 + 1/(2x³), so xy′ + 2y = x²/2 + 1/(2x²) + x²/2 − 1/(2x²) = x². Also y(1) = 0.</p><p>The solution blows up at 0. It cannot be extended through zero, and the negative-x interval does not contain the initial point.</p></details>
+</div><div class="lesson-step" data-label="Tutor-created correction check" data-stage="8" data-title="Exit 4: repair a product-rule error" hidden="">
+<div class="step-equation">y′ + 2y = x</div>
+<p>A proposed step is (e<sup>2x</sup>y)′ = x. Identify the first error and repair that line.</p>
+<details class="answer"><summary>Reveal correction</summary><div class="calculation">Correct: (e<sup>2x</sup>y)′ = xe<sup>2x</sup>.</div><p>The integrating factor is correct. The first error is failing to multiply the right side by e<sup>2x</sup>. Distribute the multiplier across the entire equation.</p></details>
+</div><div class="lesson-step" data-label="Tutor-created concept check" data-stage="8" data-title="Exit 5: distinguish failure of a theorem from failure of a solution" hidden="">
+<div class="step-equation">xy′ + (2x − 3)y = 4x⁴,   y(0) = 0</div>
+<p>Does the linear uniqueness theorem guarantee a unique solution at x₀ = 0? What does Example 3 actually show?</p>
+<details class="answer"><summary>Reveal answer and correction</summary><p>No. Standardization produces P = 2 − 3/x, which is undefined at 0, so the theorem does not apply there.</p><p>Direct substitution shows that every fixed-C function y = 2x³ + Cx³e<sup>−2x</sup> solves the original equation for all real x and satisfies y(0) = 0. These are distinct solutions, so this particular IVP is nonunique.</p><p>The theorem’s failed hypothesis alone would not establish nonuniqueness. The explicit distinct solutions do.</p></details>
+</div><div class="lesson-step" data-label="End of the authored review sequence" data-stage="8" data-title="Corrections and method summary" hidden="">
+<div class="step-equation">Normalize → ρ → product → integrate → divide → check</div>
+<table class="mini-table"><thead><tr><th>If the error was…</th><th>Repair this first</th></tr></thead><tbody><tr><td>Calling x²y nonlinear</td><td>Inspect the powers of y and y′.</td></tr><tr><td>Wrong P or Q</td><td>Divide every term by the leading coefficient.</td></tr><tr><td>Wrong integrating factor</td><td>Integrate P before exponentiating.</td></tr><tr><td>Missing right-side factor</td><td>Multiply both sides by ρ.</td></tr><tr><td>Missing constant term</td><td>Keep +C, then divide it by ρ too.</td></tr><tr><td>Wrong interval</td><td>Find coefficient boundaries, then choose the component containing x₀.</td></tr></tbody></table>
+<p>Revisit the relevant stage, close its answer and redo the corresponding exit problem. All eight planned stages are authored; this review copy records no learner answers.</p>
+</div><nav aria-label="Lesson walkthrough" class="nav">
+<button disabled="" id="ls-prev" type="button">Previous</button>
+<span aria-live="polite" class="stepcount" id="ls-stepcount">Step 1 of 40</span>
+<button class="primary" id="ls-next" type="button">Next</button>
+</nav>
+
+</section>
+<section class="section">
+<details id="ls-roadmap" open="">
+<summary>Lesson map · 8 stages</summary>
+<ol class="roadmap">
+<li><strong><button class="stage-link" data-jump="1" type="button">Recognize and prepare</button></strong><span>Identify the linear form and make the coefficient of y′ equal to 1.</span></li>
+<li><strong><button class="stage-link" data-jump="2" type="button">Build the integrating factor</button></strong><span>Casey’s ρ(x) and the product-rule connection.</span></li>
+<li><strong><button class="stage-link" data-jump="3" type="button">Simple worked example</button></strong><span>Casey’s Example 1: y′ + y = 4.</span></li>
+<li><strong><button class="stage-link" data-jump="4" type="button">Apply an initial condition</button></strong><span>Casey’s Example 2: (1 + x)y′ + y = cos(x), y(0) = 1.</span></li>
+<li><strong><button class="stage-link" data-jump="5" type="button">Uniqueness and the solution interval</button></strong><span>Casey’s theorem, with interval restrictions made explicit.</span></li>
+<li><strong><button class="stage-link" data-jump="6" type="button">Medium guided example</button></strong><span>Casey’s Example 3: xy′ + (2x − 3)y = 4x⁴.</span></li>
+<li><strong><button class="stage-link" data-jump="7" type="button">Engineering connection and prerequisite retrieval</button></strong><span>Tutor-created thermal model, slope sign and horizontal-segment checks.</span></li>
+<li><strong><button class="stage-link" data-jump="8" type="button">Exit checks and corrections</button></strong><span>Five exit problems with explicit answer reveals, followed by a correction guide.</span></li>
+</ol>
+</details>
+<details>
+<summary>Where this method fits</summary>
+<p>Three tools on the current course map:</p>
+<ol>
+<li><strong>Direct integration · Lesson 1.2</strong><span>y′ = f(x)</span></li>
+<li><strong>Separation · Lesson 1.4</strong><span>y′ = g(x)h(y)</span></li>
+<li><strong>Integrating factor · Lesson 1.5</strong><span>y′ + P(x)y = Q(x)</span></li>
+</ol>
+<p class="small muted">These methods can overlap. This is not a complete list of all first-order methods.</p>
+</details>
+<details>
+<summary>Notation and glossary</summary>
+<table class="mini-table"><thead><tr><th>Symbol</th><th>Meaning</th></tr></thead><tbody>
+<tr><td>x</td><td>Independent variable</td></tr>
+<tr><td>y(x)</td><td>Unknown solution function</td></tr>
+<tr><td>y′</td><td>dy/dx, the rate of change of y</td></tr>
+<tr><td class="blue">P(x)</td><td>Coefficient of y after standardizing</td></tr>
+<tr><td class="green">Q(x)</td><td>Right side after standardizing</td></tr>
+<tr><td>ρ(x)</td><td>Casey’s integrating-factor symbol, read “rho”</td></tr>
+</tbody></table>
+<p class="small muted">P(x) is a coefficient here, not the population P(t) from Lesson 1.4.</p>
+</details>
+<details>
+<summary>Engineering connection · optional</summary>
+<h3>State versus rate</h3>
+<p>A component’s temperature is T(t). Its derivative T′(t) measures how fast that temperature changes.</p>
+<div class="keys pair"><div><strong>T(t)</strong><span>Temperature<br/>Degrees Celsius</span></div><div><strong>T′(t)</strong><span>Temperature-change rate<br/>Degrees Celsius per second</span></div></div>
+<p class="small muted">Tutor-added analogy from the approved template. It assumes t is measured in seconds. It does not claim a particular heating or cooling law.</p>
+</details>
+<details><summary>Sources and review scope</summary>
+<p><strong>Instructor source:</strong> Dr. Casey’s <em>1.5.pdf</em>, all three pages visually inspected. Page 1: linear form, integrating factor, product-rule proof and start of Example 1. Page 2: completion of Example 1, Example 2, uniqueness theorem and start of Example 3. Page 3: completion of Example 3.</p>
+<p><strong>Observed notation:</strong> P(x), Q(x), ρ(x), y′ or dy/dx and arbitrary constant C. No private source links are included.</p>
+<p><strong>Added teaching support:</strong> recognition explanations, expanded algebra, domain clarifications, verification, engineering application, prerequisite retrieval and exit checks. These are tutor-authored rather than instructor quotations.</p>
+<p><strong>Preserved implementation:</strong> the existing Lesson 1.5 opening, typography, spacing, equation display, Previous/Next controls, glossary and optional explanations. All eight roadmap stages now contain authored instruction.</p>
+<p><strong>Source clarifications:</strong> explicit +C in the general formula, ln|1+x| on the appropriate interval in Example 2 and ln|x| with the integrating-factor sign explained in Example 3. Extension through x = 0 is checked in the original equation.</p>
+<p>The review copy stores no responses and does not modify course records.</p></details>
+</section>
+<footer class="section small muted" id="ls-status">Instructor review copy · Teaching explanations and practice additions are labeled. Navigation and reveals remain local to this page.</footer>
+
+<script>(() => {
+ const root = document.getElementById('linear-studio');
+ if (!root) return;
+ const q = id => root.querySelector('#' + id);
+ const panes = Array.from(root.querySelectorAll('.lesson-step'));
+ const jumps = Array.from(root.querySelectorAll('[data-jump]'));
+ const stageNames = ['Recognize and prepare', 'Build the integrating factor', 'Simple worked example', 'Apply an initial condition', 'Uniqueness and interval', 'Medium guided example', 'Engineering and prerequisites', 'Exit checks and corrections'];
+ let step = 0;
+ function update() {
+  const pane = panes[step];
+  const stage = Number(pane.dataset.stage);
+  const same = panes.filter(p => Number(p.dataset.stage) === stage);
+  const local = same.indexOf(pane) + 1;
+  panes.forEach((p,i) => { p.hidden = i !== step; });
+  q('ls-title').textContent = pane.dataset.title;
+  q('ls-equation').innerHTML = pane.querySelector('.step-equation').innerHTML;
+  q('ls-problem-label').textContent = pane.dataset.label;
+  q('ls-mode').textContent = 'Stage ' + stage + ' · ' + stageNames[stage-1];
+  q('ls-location').textContent = 'Stage ' + stage + ' of 8 · Step ' + local + ' of ' + same.length;
+  q('ls-stepcount').textContent = 'Step ' + (step+1) + ' of ' + panes.length;
+  q('ls-prev').disabled = step === 0;
+  q('ls-next').disabled = step === panes.length - 1;
+  jumps.forEach(b => {
+   if(Number(b.dataset.jump) === stage) b.setAttribute('aria-current','step');
+   else b.removeAttribute('aria-current');
+  });
+ }
+ function move(to) {
+  if(to < 0 || to >= panes.length) return;
+  step = to; update();
+  q('ls-mode').scrollIntoView({block:'start',behavior:'instant'});
+ }
+ q('ls-prev').addEventListener('click', () => move(step-1));
+ q('ls-next').addEventListener('click', () => move(step+1));
+ jumps.forEach(b => b.addEventListener('click', () => move(panes.findIndex(p => p.dataset.stage === b.dataset.jump))));
+ update();
+})();
+</script></article></body></html>
