@@ -5,6 +5,14 @@ mathematical explanations and instructional design.
 
 ## Open the review
 
+**[View interactive lessons](https://mpollard33.github.io/math3400-instructor-review/)**
+
+Open the website and select a lesson from the review menu. No download or sign-in is required.
+
+### Download a copy
+
+[Download the ZIP](https://github.com/mpollard33/math3400-instructor-review/archive/refs/heads/main.zip) to review the materials locally.
+
 Download and extract the folder, then open **[index.html](index.html)** in a browser.
 The lesson studios are self-contained HTML files. JavaScript enables their navigation
 and graphs. No account, package installation or build step is required.
@@ -20,12 +28,12 @@ python3 -m http.server 8000
 
 | Lesson | Studio |
 |---|---|
-| 1.1–1.3 | [Introduction, integration and slope fields](lessons/Lessons_1_1_to_1_3_Instructor_Review.html) |
-| 1.4 | [Separable equations and applications](lessons/Lesson_1_4_Instructor_Review.html) |
-| 1.5 | [First-order linear equations](lessons/Lesson_1_5_Instructor_Review.html) |
-| 1.6 | [Exact equations](lessons/Lesson_1_6_Instructor_Review.html) |
-| 1.7 | [Substitution methods: Parts A and B](lessons/Lesson_1_7_Instructor_Review.html) |
-| 1.8 | [Euler’s method](lessons/Lesson_1_8_Instructor_Review.html) |
+| 1.1–1.3 | [Introduction, integration and slope fields](https://mpollard33.github.io/math3400-instructor-review/lessons/Lessons_1_1_to_1_3_Instructor_Review.html) |
+| 1.4 | [Separable equations and applications](https://mpollard33.github.io/math3400-instructor-review/lessons/Lesson_1_4_Instructor_Review.html) |
+| 1.5 | [First-order linear equations](https://mpollard33.github.io/math3400-instructor-review/lessons/Lesson_1_5_Instructor_Review.html) |
+| 1.6 | [Exact equations](https://mpollard33.github.io/math3400-instructor-review/lessons/Lesson_1_6_Instructor_Review.html) |
+| 1.7 | [Substitution methods: Parts A and B](https://mpollard33.github.io/math3400-instructor-review/lessons/Lesson_1_7_Instructor_Review.html) |
+| 1.8 | [Euler’s method](https://mpollard33.github.io/math3400-instructor-review/lessons/Lesson_1_8_Instructor_Review.html) |
 
 Lessons 1.1–1.3 remain combined. Each of Lessons 1.4 through 1.8 has its own file;
 Lesson 1.7 includes both Parts A and B.
@@ -53,7 +61,7 @@ interaction pattern. The image is a static illustration, not a separate function
 ## Repository checks
 
 Use this folder’s contents as the repository root, preserving the directory structure.
-All lesson and image links are relative. The package contains no repository credentials,
+The website uses relative lesson and image links; the README links directly to the live lessons. The package contains no repository credentials,
 private chat links or machine-specific paths. The repository contains the instructor review distribution.
 
 To check the extracted bundle:
